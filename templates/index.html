@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Churn Predictor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h1>🏦 Bank Churn Predictor</h1>
+
+    <form action="/predict" method="post">
+
+        <input name="credit_score" placeholder="Credit Score" required>
+        <input name="age" placeholder="Age" required>
+
+        <input name="tenure" placeholder="Tenure" required>
+        <input name="balance" placeholder="Balance" required>
+
+        <input name="products_number" placeholder="Products" required>
+        <input name="estimated_salary" placeholder="Salary" required>
+
+        <select name="gender">
+            <option value="0">Female</option>
+            <option value="1">Male</option>
+        </select>
+
+        <select name="credit_card">
+            <option value="0">No Card</option>
+            <option value="1">Has Card</option>
+        </select>
+
+        <select name="active_member">
+            <option value="0">Inactive</option>
+            <option value="1">Active</option>
+        </select>
+
+        <select name="country_Germany">
+            <option value="0">Not Germany</option>
+            <option value="1">Germany</option>
+        </select>
+
+        <select name="country_Spain">
+            <option value="0">Not Spain</option>
+            <option value="1">Spain</option>
+        </select>
+
+        <button type="submit">Predict</button>
+
+    </form>
+
+    <h2>{{ prediction_text }}</h2>
+</div>
+
+</body>
+</html>
